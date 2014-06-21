@@ -17,13 +17,12 @@ public class TocHw3
 		int count=0; //how many data
 		for(int i=0 ;i<json.length() ;++i)
 		{
-			JSONObject jsonObj = json.getJSONObject(i); //get this json data
-			Matcher matcher1=pattern1.matcher(jsonObj.getString("鄉鎮市區")); //to match this pattern
-			Matcher matcher2=pattern2.matcher(jsonObj.getString("土地區段位置或建物區門牌")); //to match this pattern
-			int year_data=jsonObj.getInt("交易年月")/100; //get only year (delete month)
+			Matcher matcher1=pattern1.matcher(json.getJSONObject(i).getString("鄉鎮市區")); //to match this pattern with object(i) in array
+			Matcher matcher2=pattern2.matcher(json.getJSONObject(i).getString("土地區段位置或建物區門牌")); //to match this pattern
+			int year_data=json.getJSONObject(i).getInt("交易年月")/100; //get only year (delete month)
 			if(matcher1.find() && matcher2.find() && year_data>=Year)
 			{
-				Output+=jsonObj.getInt("總價元");
+				Output+=json.getJSONObject(i).getInt("總價元");
 				++count;
 			}
 		}
