@@ -13,7 +13,7 @@ public class TocHw3
 		Pattern pattern1=Pattern.compile(".*"+args[1]+".*"); //district
 		Pattern pattern2=Pattern.compile(".*"+args[2]+".*"); //road
 		int Year=Integer.valueOf(args[3]); //year
-		int Output=0; //total price 
+		int Output=0; //total price
 		int count=0; //how many data
 		for(int i=0 ;i<json.length() ;++i)
 		{
