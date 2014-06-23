@@ -34,7 +34,7 @@ public class TocHw3
 				++count;
 			}
 		}
-		System.out.println((int)(Output/count)); //avg = total/count
+		System.out.println((int)(Output/(count>0?count:1))); //avg = total/count (avoid count is 0)
 	}
 
 	private static String readAll(Reader rd) throws IOException
@@ -61,3 +61,4 @@ public class TocHw3
 		}
 	}
 }
+
