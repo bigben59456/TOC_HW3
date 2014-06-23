@@ -1,11 +1,16 @@
-/*
+/*################
 姓名 : 吳邦宇
+
 學號 : F74006292
+
 簡述 : 
 將json檔 "鄉鎮市區" "土地區段" 欄位取出 "交易年月"只保留年的部分
 如果和要求相符便將總價加入並增加一筆資料筆數
 最後印出 (int)(總價/資料筆數)
-*/
+
+參考 : 檔案的讀取 http://stackoverflow.com/questions/4308554/simplest-way-to-read-json-from-a-url-in-java
+#################*/
+
 import java.io.*;
 import java.net.*;
 import org.json.*;
@@ -61,4 +66,3 @@ public class TocHw3
 		}
 	}
 }
-
