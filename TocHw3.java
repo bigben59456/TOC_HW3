@@ -9,7 +9,7 @@
 最後印出 (int)(總價/資料筆數)
 
 參考 : 檔案的讀取 http://stackoverflow.com/questions/4308554/simplest-way-to-read-json-from-a-url-in-java
-#################*/
+################*/
 
 import java.io.*;
 import java.net.*;
